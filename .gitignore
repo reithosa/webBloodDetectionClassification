@@ -3,8 +3,8 @@ ML_modul/Bad_frames/
 ML_modul/Dataset/
 ML_modul/DifferentColorData/
 ML_modul/LS_Backend/
-ML_modul/labeling/
-ML_modul/MyDataset/
+ML_modul/labeling/*
+ML_modul/MyDataset/*/*
 ML_modul/special_venv/
 
 #файлы
