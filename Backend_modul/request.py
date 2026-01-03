@@ -38,6 +38,7 @@ def start_page(request: Request):
 
 @app.post('/file')
 def post_file(image: UploadFile):
+    
     file = image.file
     file_name = image.filename
     str_path = Path(__file__).parent / "static" / "images" / file_name
@@ -50,7 +51,11 @@ def post_file(image: UploadFile):
              conf=0.3,
              iou=0.3
         )
+    
     result = results[0]
+    print("---------------------------------------------------------------")
+    print(result.boxes)
+    print("---------------------------------------------------------------")
     cv2.imwrite(str_path, result.plot())
 
     return {
