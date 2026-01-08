@@ -267,8 +267,8 @@ input[type="file"] {
     cursor: pointer;
 }
 
-/*Контейнер изображения*/
-.container_images {
+/*Контейнер последних изображения*/
+.container_image {
     display: flex;
     flex-direction: row;
     height: 5rem;
@@ -277,6 +277,7 @@ input[type="file"] {
     border-radius: 0.3rem;
     margin: 0.4rem;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .container_image_img {
@@ -291,22 +292,34 @@ input[type="file"] {
     padding: 1rem;
 }
 
-.container_image_info_name {
+.container_image_info_span {
     font-family: "RobotoSerif-Regular", Local Fonts;
     color: black;
     font-size: 12pt; 
 }
 
-.container_image_info_user {
-font-family: "RobotoSerif-Regular", Local Fonts;
-    color: black;
-    font-size: 12pt; 
+/* Контейнер последних изменений */
+.container_change {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 5rem;
+    width: 100;
+    background-color:white;
+    border-radius: 0.3rem;
+    margin: 0.4rem;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.container_image_info_time {
+.container_change_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.container_change_info_span {
     font-family: "RobotoSerif-Regular", Local Fonts;
     color: black;
     font-size: 12pt; 
 }
-
-

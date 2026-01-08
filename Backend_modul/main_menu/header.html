@@ -212,87 +212,79 @@
                     </div> 
                 </div>
                 <div id="brief_summaries">
+                    <!-- Контейнер с изображением и инфой о нём-->
                     <div id="past_images">
                         <div class="title_summary">
                             <span class="title_summary_text">Последние изображения</span>
                         </div>
+
                         <div class="grid_summary">
-                            <div class="container_images">
+
+                            <div class="container_image">
                                 <img src="./test.jpg" class="container_image_img">
                                 <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
+                                    <span class="container_image_info_span">img123.png</span>
+                                    <span class="container_image_info_span">Ivanov Ivan Ivanovich</span>
+                                    <span class="container_image_info_span">2026-01-01 00:00:00</span>
                                 </div>
                             </div>
-                            <div class="container_images">
+
+                            <div class="container_image">
                                 <img src="./test.jpg" class="container_image_img">
                                 <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
+                                    <span class="container_image_info_span">img123.png</span>
+                                    <span class="container_image_info_span">Ivanov Ivan Ivanovich</span>
+                                    <span class="container_image_info_span">2026-01-01 00:00:00</span>
                                 </div>
                             </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
-                            <div class="container_images">
-                                <img src="./test.jpg" class="container_image_img">
-                                <div class="container_image_info">
-                                    <span class="container_image_info_name">img123.png</span>
-                                    <span class="container_image_info_user">Ivanov Ivan Ivanovich</span>
-                                    <span class="container_image_info_time">2026-01-01 00:00:00</span>
-                                </div>
-                            </div>
+
+                            <!-- и так другие контейнеры -->
                         </div>
+
                         <div class="link_summary">
                             <span class="link_summary_text">Посмотреть ещё...</span>
                         </div>
                     </div>
+
+                    <!-- Контейнер с изменением и инфой о нём-->
                     <div id="past_changes">
                         <div class="title_summary">
                             <span class="title_summary_text">Последние изменение</span>
                         </div>
+
                         <div class="grid_summary">
-                            <div class="container_change"></div>
+
+                            <div class="container_change">
+                                <div class="container_change_info">
+                                    <span class="container_change_info_span">Id: 1</span>
+                                    <span class="container_change_info_span">Type: User</span>
+                                    <span class="container_change_info_span">Type change: CREATE</span>
+                                    <span class="container_change_info_span">Object change: user123</span> 
+                                </div>
+                                <div class="container_change_info">
+                                    <span class="container_change_info_span">Change owner: Ivan Ivanov</span>
+                                    <span class="container_change_info_span">Time: 01.01.2026 00:00:00</span>
+                                    <span class="container_change_info_span">Change owner role: admin</span>
+                                </div> 
+                            </div>
+
+                            <div class="container_change">
+                                <div class="container_change_info">
+                                    <span class="container_change_info_span">Id: 2</span>
+                                    <span class="container_change_info_span">Type: Image</span>
+                                    <span class="container_change_info_span">Type change: DELETE</span>
+                                    <span class="container_change_info_span">Object change: img123.png</span> 
+                                </div>
+                                <div class="container_change_info">
+                                    <span class="container_change_info_span">Change owner: Ivan Ivanov</span>
+                                    <span class="container_change_info_span">Change owner role: admin</span>
+                                    <span class="container_change_info_span">Time: 01.01.2026 00:00:00</span>
+                                </div> 
+                            </div>
+
+                            <!-- и так другие контейнеры -->
                         </div>
+                        
                         <div class="link_summary">
                             <span class="link_summary_text">Посмотреть ещё...</span>
                         </div>
