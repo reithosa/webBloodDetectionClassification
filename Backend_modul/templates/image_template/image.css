@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Local Fonts';
+    src: local("RobotoSerif-Regular");
+}
+
+/* база */
+* {
+    margin: 0;
+}
+#content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* head */
+#nav_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+#nameSite {
+    font-size: 2.3rem;
+    margin-right: auto;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    cursor: pointer;
+    user-select: none;
+}
+#hub_link {
+    padding-left: 10rem;
+}
+#navigation {
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+    border-bottom: 0.1rem solid black;
+    z-index: 998;
+    flex-shrink: 0;
+}
+#avatar {
+    height: 3rem;
+    width: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* выдвигающиеся окно */
+#win_nav {
+    position: fixed;
+    right: -20rem;
+    transition: 0.2s right ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 20rem;
+    border-left: 0.1rem solid black;
+    box-sizing: border-box;
+    background: white;
+    z-index: 1000;
+    gap: 1rem;
+}
+#win_nav.open {
+    right: 0;
+}
+
+#win_title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    user-select: none;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+}
+
+#win_nav_avatar {
+    height: 3rem;
+    width: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    -webkit-user-drag: none;
+}
+#win_nav_cross {
+    height: 2rem;
+    width: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-user-drag: none;
+}
+#win_nav_name {
+    font-size: 1rem;
+}
+
+#list_buttons {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+
+.win_nav_buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0rem;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+}
+
+.win_nav_buttons:hover {
+    background-color: lightgray;
+}
+.win_nav_images {
+    -webkit-user-drag: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 14%;
+}
+
+.menu_overlay {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu_overlay.active {
+    display: block;
+}
+
+/* Canvas */
+#body {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+    padding: 3rem;
+    height: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0;
+}
+#menu_body {
+    border: 0.1rem solid black;
+    box-sizing: border-box;
+    height: 100%;
+    width: 18rem;
+}
+#hbody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    width: auto;
+    flex: 1;
+    min-height: 0;
+}
+
+#canvas_div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0.1rem solid black;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/*Кнопки canvas*/
+#canvas_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border: 0.1rem solid black;
+    background-color: transparent;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+/*Кнопки с svg*/
+.svg_canvas_buttons {
+    height: 4rem;
+    width: 4rem;
+}
+.buttons_icon {
+    height: 4rem;
+    width: 4rem;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    margin: 0rem 0rem 0rem 1rem;
+    background-color: white;
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
+}
+.buttons_icon:hover {
+    background-color: lightgray;
+}
+
+#buttons_change {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+#delete_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 4.5rem; 
+    padding: 0.5rem;
+    background-color: white;
+    border: 0.2rem solid crimson;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#delete_btn_title {
+    color: black;
+    font-size: 3rem;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    user-select: none;
+}
+#save_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 4.5rem; 
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 0.2rem solid darkgreen;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#save_btn_title {
+    color: black;
+    font-size: 3rem;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    user-select: none;
+}
