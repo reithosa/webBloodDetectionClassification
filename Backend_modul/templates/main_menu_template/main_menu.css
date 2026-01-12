@@ -164,7 +164,7 @@ input[type="file"] {
     flex-direction: row;
     align-items: center;
     justify-content: center; /* Центрируем все элементы */
-    gap: 3rem;
+    gap: 6rem;
     width: 100%;
 }
 
@@ -205,7 +205,7 @@ input[type="file"] {
     align-content: center;
     height: 400px;
     width: 400px;
-    padding: 3rem;
+    padding: 0rem 3rem 0rem 0rem;
     box-sizing: border-box;
 }
 
