@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./editor.css"/>
+        <link rel="stylesheet" href="./result.css"/>
         <title id="title_site_name">BloodCells</title>
 
     </head>
     <body>
-        <script src="./konva.js"></script>
-        <script src="./main_edit.js"></script>
+
+        <script src="./result.js"></script>
         
         <div id="content">
 
@@ -169,118 +168,219 @@
                         <img src="./avatar.jpg" id="avatar"/>
                     </a>
                 </nav>
-                <div style="height: 1rem"></div>
+                <div style="height: 1rem;"></div>
             </div>
             
-            <script src="./editor.js"></script>
             <div id="body">
-                <!--- основной контент --->
-                <div id="hbody">
-                    <div id="canvas_div">
-
+                <div id="statistics">
+                    <div id="title_stat">
+                        <div id="header_stat">
+                            <span id="image_name_stat" class="text_stat">Изображение: image1.png</span>
+                            <span id="user_stat" class="text_stat">Пользователь: Иванов Иван Иванович</span>
+                            <span id="time_stat" class="text_stat">Дата и время создания: 12.01.2026 00:00:00</span>
+                            <span id="time_stat" class="text_stat">Дата и время последнего изменения: 12.01.2026 00:00:00</span>
+                        </div>
+                        <img src="./test.jpg" id="image_stat"/>
                     </div>
-
-                    <div id="canvas_buttons">
-                        <div id="cursor" class="buttons_icon">
-                            <svg version="1.1" id="Cursor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 81.16 117.78" style="enable-background:new 0 0 81.16 117.78;" xml:space="preserve" class="svg_canvas_buttons">
-                                <g>
-                                    <path d="M6.97,12.08l62.37,50.49l-20.24,3.31l-7.14,1.17l3.62,6.27l19.91,34.48l-5.18,3.09L40.48,76.53l-3.61-6.25l-4.58,5.57
-                                        L19.52,91.38L6.97,12.08 M0,0l16.31,103.14l19.83-24.1l22.37,38.74l13.76-8.22L49.91,70.81l31.25-5.12L0,0L0,0z"/>
-                                </g>
-                            </svg>
-                        </div>
-                        <div id="hand" class="buttons_icon">
-                            <svg version="1.1" id="Hand" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 115.87 115.87" style="enable-background:new 0 0 115.87 115.87;" xml:space="preserve" class="svg_canvas_buttons">
-                                <style type="text/css">
-                                    .st0{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
-                                </style>
-                                <line class="st0" x1="57.54" y1="16.66" x2="57.93" y2="99.21"/>
-                                <polygon points="61.89,26.16 53.18,26.16 44.25,29.56 57.53,0 70.82,29.56 "/>
-                                <polygon points="53.58,89.7 62.29,89.7 71.22,86.31 57.93,115.87 44.65,86.31 "/>
-                                <line class="st0" x1="16.46" y1="58.13" x2="99.01" y2="57.74"/>
-                                <polygon points="26.16,53.78 26.16,62.49 29.56,71.42 0,58.13 29.56,44.85 "/>
-                                <polygon points="89.7,62.09 89.7,53.38 86.31,44.45 115.87,57.73 86.31,71.02 "/>
-                            </svg>
-
-                        </div>
-                        <div id="loop_plus" class="buttons_icon">
-                            <svg version="1.1" id="Plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 96.01 124.57" style="enable-background:new 0 0 96.01 124.57;" xml:space="preserve" class="svg_canvas_buttons">
-                                <style type="text/css">
-                                    .st0{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
-                                </style>
-                                <circle class="st0" cx="48.01" cy="48.01" r="43"/>
-                                <line class="st0" x1="69.51" y1="85.25" x2="90.77" y2="122.07"/>
-                                <line class="st0" x1="48.01" y1="19.66" x2="48.01" y2="76.35"/>
-                                <line class="st0" x1="76.35" y1="48.01" x2="19.66" y2="48.01"/>
-                            </svg>
-                        </div>
-                        <div id="loop_minus" class="buttons_icon">
-                            <svg version="1.1" id="Minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                viewBox="0 0 96.01 124.57" style="enable-background:new 0 0 96.01 124.57;" xml:space="preserve" class="svg_canvas_buttons">
-                                <style type="text/css">
-                                    .st0{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
-                                </style>
-                                <circle class="st0" cx="48.01" cy="48.01" r="43"/>
-                                <line class="st0" x1="69.51" y1="85.25" x2="90.77" y2="122.07"/>
-                                <line class="st0" x1="76.35" y1="48.01" x2="19.66" y2="48.01"/>
-                            </svg>
-                        </div>
-                        <div id="red_cell" class="cell_buttons">
-                            <span class="button_cell_title">Эритроцит</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="red"/>
-                            </svg>
-                        </div>
-                        <div id="plat_cell" class="cell_buttons">
-                            <span class="button_cell_title">Тромбоцит</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="DarkSlateGray"/>
-                            </svg>
-                        </div>
-                        <div id="bas_cell" class="cell_buttons">
-                            <span class="button_cell_title">Базофил</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="blue"/>
-                            </svg>
-                        </div>
-                        <div id="neu_cell" class="cell_buttons">
-                            <span class="button_cell_title">Нейтрофил</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="green"/>
-                            </svg>
-                        </div>
-                        <div id="eo_cell" class="cell_buttons">
-                            <span class="button_cell_title">Эозинофил</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="cyan"/>
-                            </svg>
-                        </div>
-                        <div id="mono_cell" class="cell_buttons">
-                            <span class="button_cell_title">Моноцит</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="purple"/>
-                            </svg>
-                        </div>
-                        <div id="lymph_cell" class="cell_buttons">
-                            <span class="button_cell_title">Лимфоцит</span>
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
-                                <circle cx="50" cy="50" r="50" fill="Lime"/>
-                            </svg>
-                        </div>
+                    <div id="title_name_div_stat">
+                        <span id="title_name_stat">Результат исследования</span>
                     </div>
-                </div>
-                <div id="menu_body">
-                    <div id="properties">
-
-                    </div>
-                    <div id="save_button">
-                        <span id="save_btn_title">SAVE RESULT</span>
-                    </div>
-                    <div id="delete_button">
-                        <span id="delete_btn_title">DELETE BBOX</span>
+                    <div id="body_stat">
+                        <div id="general_stat">
+                            <table>
+                                <caption>1. Общая статистика</caption>
+                                <thead>
+                                    <tr>
+                                        <td>Тип клетки</td>
+                                        <td>Количество</td>
+                                        <td>Референсное значение</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Эритроцит</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Тромбоцит</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Базофил</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Нейтрофил</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Эозинофил</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Моноцит</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лимфоцит</td>
+                                        <td>9999</td>
+                                        <td>4.0 - 9.0 * 10<sup>9</sup>/л</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="leukocyte_formula">
+                            <table>
+                                <caption>2. Лейкоцитарная формула</caption>
+                                <thead>
+                                    <tr>
+                                        <td>Тип клетки</td>
+                                        <td>Количество</td>
+                                        <td>% от общего количества</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Базофил</td>
+                                        <td>9999</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Нейтрофил</td>
+                                        <td>9999</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Эозинофил</td>
+                                        <td>9999</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Моноцит</td>
+                                        <td>9999</td>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лимфоцит</td>
+                                        <td>9999</td>
+                                        <td>20%</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <td>Общее количество:</td>
+                                    <td>49995</td>
+                                    <td>100%</td>
+                                </tfoot>
+                            </table>
+                            <div id="diagram">
+                                <img src=".\diagramma.png" id="diagram_leykocyte">
+                                <div id="history_diagram">
+                                    <div id="bas_cell" class="cell_buttons">
+                                        <span class="button_cell_title">Базофил - 20%</span>
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
+                                            <circle cx="50" cy="50" r="50" fill="blue"/>
+                                        </svg>
+                                    </div>
+                                    <div id="neu_cell" class="cell_buttons">
+                                        <span class="button_cell_title">Нейтрофил - 20%</span>
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
+                                            <circle cx="50" cy="50" r="50" fill="green"/>
+                                        </svg>
+                                    </div>
+                                    <div id="eo_cell" class="cell_buttons">
+                                        <span class="button_cell_title">Эозинофил - 20%</span>
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
+                                            <circle cx="50" cy="50" r="50" fill="cyan"/>
+                                        </svg>
+                                    </div>
+                                    <div id="mono_cell" class="cell_buttons">
+                                        <span class="button_cell_title">Моноцит - 20%</span>
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
+                                            <circle cx="50" cy="50" r="50" fill="purple"/>
+                                        </svg>
+                                    </div>
+                                    <div id="lymph_cell" class="cell_buttons">
+                                        <span class="button_cell_title">Лимфоцит - 20%</span>
+                                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="circle_cell">
+                                            <circle cx="50" cy="50" r="50" fill="Lime"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="confidence">
+                            <table>
+                                <caption>3. Уверенность модели</caption>
+                                <thead>
+                                    <tr>
+                                        <td>Тип клетки</td>
+                                        <td>Уверенность (%)</td>
+                                        <td>Минимальная уверенность (%)</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Эритроцит</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Тромбоцит</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Базофил</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Нейтрофил</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Эозинофил</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Моноцит</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лимфоцит</td>
+                                        <td>99%</td>
+                                        <td>88.4%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="comments">
+                            <span id="title_commets_stat">4. Комментарии</span>
+                            <textarea placeholder="Введите текст (максимум символов - 1000, минимум - 4)" maxlength="1000"></textarea>
+                        </div>
+                        <div id="buttons_stat">
+                            <div id="install_button">
+                                <span id="install_btn_title">INSTALL PDF</span>
+                            </div>
+                            <div id="save_button">
+                                <span id="save_btn_title">SAVE RESULT</span>
+                            </div>
+                            <div id="change_button">
+                                <span id="change_btn_title">CHANGE LABELS</span>
+                            </div>
+                            <div id="delete_button">
+                                <span id="delete_btn_title">DELETE RESULT</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

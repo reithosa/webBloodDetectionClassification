@@ -7,6 +7,9 @@
 * {
     margin: 0;
 }
+html, body {
+    height: 100%;
+}
 #content {
     display: flex;
     height: 100vh;
@@ -143,116 +146,197 @@
     display: block;
 }
 
-/* Canvas */
+/* Result */
 #body {
     display: flex;
-    flex-direction: column;
-    padding: 3rem;
-    height: 100%;
-    box-sizing: border-box;
-    flex: 1;
-    min-height: 0;
-}
-
-#hbody {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    width: auto;
-    flex: 1;
-    min-height: 0;
-
-    border: 0.1rem solid black;
-    box-sizing: border-box;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-
-#canvas_div {
-    height: 100%;
-    display: block;
-    flex: 1;
-}
-
-/*Кнопки canvas*/
-#canvas_buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: top;
-    width: 100%;
-    height: 5rem;
-    background-color: transparent;
-    flex-shrink: 0;
-}
-/*Кнопки с svg*/
-#buttons_tools {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+#statistics {
+    display: flex;
+    flex-direction: column;
+    width: 76rem;
+    min-height: 100%;
     padding: 1rem;
-
-    border-left: 0.1rem solid black;
-    border-right: 0.1rem solid black;
-    border-bottom: 0.1rem solid black;
-    box-sizing: border-box;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    gap: 1rem;
+    padding-bottom: 5rem;
 }
 
-.svg_canvas_buttons {
-    height: 4rem;
-    width: 4rem;
-}
-.buttons_icon {
-    height: 4rem;
-    width: 4rem;
-    align-items: center;
-    justify-items: center;
-    cursor: pointer;
-    margin: 0rem 0rem 0rem 0rem;
-    background-color: white;
-    border: 0.2rem solid transparent;
-    border-radius: 1rem;
-}
-.buttons_icon:hover {
-    background-color: lightgray;
-}
-#buttons_change {
+/* Титульник статистики */
+#title_stat {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    gap: 1rem;
+}
+#image_stat {
+    width: 25rem;
+    height: auto;
     margin-left: auto;
 }
+#header_stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: auto;
+    height: auto;
+}
+.text_stat {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+}
+#title_name_div_stat {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 2rem;
+}
+#title_name_stat {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* Тело статистики */
+#body_stat {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    gap: 3rem;
+}
 
+/*Таблицы*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.1rem solid black;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    justify-content: center;
+    margin: 0 auto;
+}
+tfoot {
+    background-color: SteelBlue;
+}
+thead {
+    background-color: SteelBlue;
+    font-weight: bold;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  vertical-align: center;
+  text-align: center;
+}
+caption {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 1rem 0rem;
+    margin-top: 3rem;
+}
 
-#change_button {
+/*Диаграмма*/
+#leukocyte_formula {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+#diagram {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin: 3rem 0rem;
+}
+#diagram_leykocyte {
+    width: 30rem;
+    height: auto;
+}
+#history_diagram {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.button_cell_title {
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+}
+.circle_cell {
+    width: 1rem;
+    height: auto;
+    margin-left: 0.2rem
+}
+
+#confidence {
+
+}
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    height: 20rem;
+    
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ccc;
+    font-size: 1rem;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    resize: none;
+    padding: 0.5rem;
+}
+textarea:focus {
+    border-color: black;
+}
+#title_commets_stat {
+    font-size: 1.2rem;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    font-weight: bold;
+    text-align: left;
+    margin: 3rem 0rem;
+    margin-right: auto;
+}
+
+#buttons_stat {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+#delete_button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16rem;
+    width: 15rem;
     height: 3rem; 
     padding: 0.5rem;
     margin: 0.5rem;
-    border-radius: 1rem;
     background-color: white;
-    border: 0.2rem solid Coral;
+    border: 0.2rem solid crimson;
+    border-radius: 1rem;
     box-sizing: border-box;
     cursor: pointer;
 }
-#change_button:hover{
-    background-color: Coral;
+#delete_button:hover {
+    background-color: crimson;
 }
-#change_button:hover #change_btn_title {
+#delete_button:hover #delete_btn_title {
     color: white;
 }
-#change_btn_title {
+#delete_btn_title {
     color: black;
     font-size: 1.5rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
@@ -263,7 +347,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16rem;
+    width: 15rem;
     height: 3rem; 
     padding: 0.5rem;
     margin: 0.5rem;
@@ -286,11 +370,11 @@
     user-select: none;
 }
 
-#stat_button {
+#install_button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16rem;
+    width: 15rem;
     height: 3rem; 
     padding: 0.5rem;
     margin: 0.5rem;
@@ -300,40 +384,40 @@
     box-sizing: border-box;
     cursor: pointer;
 }
-#stat_button:hover{
+#install_button:hover{
     background-color: darkgreen;
 }
-#stat_button:hover #stat_btn_title {
+#install_button:hover #install_btn_title {
     color: white;
 }
-#stat_btn_title {
+#install_btn_title {
     color: black;
     font-size: 1.5rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
     user-select: none;
 }
 
-#delete_button {
+#change_button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16rem;
+    width: 15rem;
     height: 3rem; 
     padding: 0.5rem;
     margin: 0.5rem;
-    background-color: white;
-    border: 0.2rem solid crimson;
     border-radius: 1rem;
+    background-color: white;
+    border: 0.2rem solid Coral;
     box-sizing: border-box;
     cursor: pointer;
 }
-#delete_button:hover {
-    background-color: crimson;
+#change_button:hover{
+    background-color: Coral;
 }
-#delete_button:hover #delete_btn_title {
+#change_button:hover #change_btn_title {
     color: white;
 }
-#delete_btn_title {
+#change_btn_title {
     color: black;
     font-size: 1.5rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
