@@ -206,7 +206,6 @@ input[type="file"] {
     height: 400px;
     width: 400px;
     padding: 3rem;
-    border-left: 0.2rem solid black;
     box-sizing: border-box;
 }
 
