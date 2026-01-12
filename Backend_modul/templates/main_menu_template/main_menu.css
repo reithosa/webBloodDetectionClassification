@@ -145,130 +145,181 @@
 
 /* Canvas */
 #body {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: auto 1fr;
     gap: 0.2rem;
     padding: 3rem;
     height: 100%;
     box-sizing: border-box;
-    flex: 1;
     min-height: 0;
 }
-#menu_body {
-    border: 0.1rem solid black;
-    box-sizing: border-box;
-    height: 100%;
-    width: 18rem;
+
+/* Кнопка */
+input[type="file"] {
+    display: none;
 }
-#hbody {
+
+#input_div {
+    display: flex; /* Меняем на flex */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Центрируем все элементы */
+    gap: 3rem;
+    width: 100%;
+}
+
+#input_file {
+    display: inline-block;
+}
+
+#trigger {
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#blood_buttom {
+    display: block;
+}
+
+#trigger span {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    font-size: 20pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    pointer-events: none;
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Описание кнопки */
+#description {
+    display: grid;
+    align-content: center;
+    height: 400px;
+    width: 400px;
+    padding: 3rem;
+    border-left: 0.2rem solid black;
+    box-sizing: border-box;
+}
+
+.text_description {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+    font-size: 14pt;
+}
+
+/* Краткие обзоры недавних изображений и изменений */
+#brief_summaries {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#past_images, #past_changes {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Заголовок, контент, ссылка */
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.title_summary {
+    text-align: center;
+}
+
+.title_summary_text {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+    font-size: 14pt;
+}
+
+.grid_summary {
+    min-height: 0;
+    background-color:darkgrey;
+    overflow-y: auto;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    gap: 0.5rem;
+}
+
+.link_summary {
+    
+}
+
+.link_summary_text {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+    font-size: 10pt; 
+    cursor: pointer;
+}
+
+/*Контейнер последних изображения*/
+.container_image {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    width: 100;
+    background-color:white;
+    border-radius: 0.3rem;
+    margin: 0.4rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container_image_img {
+    width: auto;
+    height: 100%;
+}
+
+.container_image_info {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    width: auto;
-    flex: 1;
-    min-height: 0;
+    justify-content: center;
+    padding: 1rem;
 }
 
-#canvas_div {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 0.1rem solid black;
-    box-sizing: border-box;
-    flex: 1;
+.container_image_info_span {
+    font-family: "RobotoSerif-Regular", Local Fonts;
+    color: black;
+    font-size: 12pt; 
 }
 
-/*Кнопки canvas*/
-#canvas_buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
+/* Контейнер последних изменений */
+.container_change {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 5rem;
-    border: 0.1rem solid black;
-    background-color: transparent;
-    box-sizing: border-box;
-    flex-shrink: 0;
-}
-/*Кнопки с svg*/
-.svg_canvas_buttons {
-    height: 4rem;
-    width: 4rem;
-}
-.buttons_icon {
-    height: 4rem;
-    width: 4rem;
-    align-items: center;
-    justify-items: center;
+    width: 100;
+    background-color:white;
+    border-radius: 0.3rem;
+    margin: 0.4rem;
+    overflow: hidden;
     cursor: pointer;
-    margin: 0rem 0rem 0rem 1rem;
-    background-color: white;
-    border: 0.2rem solid transparent;
-    border-radius: 1rem;
-}
-.buttons_icon:hover {
-    background-color: lightgray;
 }
 
-#buttons_change {
+.container_change_info {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin-left: auto;
+    padding-left: 1rem;
 }
-#delete_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16rem;
-    height: 4.5rem; 
-    padding: 0.5rem;
-    background-color: white;
-    border: 0.2rem solid crimson;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-#delete_button:hover {
-    background-color: crimson;
-}
-#delete_button:hover #delete_btn_title {
-    color: white;
-}
-#delete_btn_title {
-    color: black;
-    font-size: 3rem;
+
+.container_change_info_span {
     font-family: "RobotoSerif-Regular", Local Fonts;
-    user-select: none;
-}
-#save_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16rem;
-    height: 4.5rem; 
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-radius: 1rem;
-    background-color: white;
-    border: 0.2rem solid darkgreen;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-#save_button:hover{
-    background-color: darkgreen;
-}
-#save_button:hover #save_btn_title {
-    color: white;
-}
-#save_btn_title {
     color: black;
-    font-size: 3rem;
-    font-family: "RobotoSerif-Regular", Local Fonts;
-    user-select: none;
+    font-size: 12pt; 
 }

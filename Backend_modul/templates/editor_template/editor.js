@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     plat_cell.addEventListener('click', () => {
         dragOn();
         tool = 'labeling';
-        type_cell = 'brown';
+        type_cell = 'DarkSlateGray';
         transformer.nodes([]);
     });
 
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lymph_cell.addEventListener('click', () => {
         dragOn();
         tool = 'labeling';
-        type_cell = 'yellow';
+        type_cell = 'Lime';
         transformer.nodes([]);
     });
 

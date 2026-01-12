@@ -204,6 +204,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: white;
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
 }
 .buttons_icon:hover {
     background-color: lightgray;
@@ -211,16 +214,26 @@
 /*Кнопки с текстом*/
 .cell_buttons {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 4rem;
+    height: 3rem;
     width: auto;
     padding: 0.4rem;
     cursor: pointer;
+    background-color: white;
+    border: 0.2rem solid transparent;
+    border-radius: 1rem;
+}
+.circle_cell {
+    width: 1rem;
+    height: auto;
+    margin-left: 0.2rem
 }
 .button_cell_title {
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
     user-select: none;
 }
@@ -234,6 +247,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0.5rem;
 }
 #properties {
     height: 100%;
@@ -245,15 +259,21 @@
     justify-content: center;
     width: 100%;
     height: 5rem; 
-    background-color: crimson;
     padding: 0.5rem;
-    border: 0.5rem rgb(61, 0, 12) solid;
+    background-color: white;
+    border: 0.2rem solid crimson;
+    border-radius: 1rem;
     box-sizing: border-box;
     cursor: pointer;
 }
-#delete_btn_title {
-    font-weight: bold;
+#delete_button:hover {
+    background-color: crimson;
+}
+#delete_button:hover #delete_btn_title {
     color: white;
+}
+#delete_btn_title {
+    color: black;
     font-size: 3rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
     user-select: none;
@@ -264,15 +284,22 @@
     justify-content: center;
     width: 100%;
     height: 5rem; 
-    background-color:rgb(133, 190, 76);
     padding: 0.5rem;
-    border: 0.5rem darkgreen solid;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 0.2rem solid darkgreen;
     box-sizing: border-box;
     cursor: pointer;
 }
-#save_btn_title {
-    font-weight: bold;
+#save_button:hover{
+    background-color: darkgreen;
+}
+#save_button:hover #save_btn_title {
     color: white;
+}
+#save_btn_title {
+    color: black;
     font-size: 3rem;
     font-family: "RobotoSerif-Regular", Local Fonts;
     user-select: none;
