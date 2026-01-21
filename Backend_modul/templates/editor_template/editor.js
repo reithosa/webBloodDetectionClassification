@@ -30,9 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
         keepRatio: false,
         ignoreStroke: true, 
         boundBoxFunc: function(oldBox, newBox) {
-            if (newBox.width < 10 || newBox.height < 10) {
-                return oldBox;
+            const box = imageBox.getClientRect();
+
+            if (newBox.x < box.x) {
+                newBox.x = box.x;
             }
+
+            if (newBox.y < box.y) {
+                newBox.y = box.y;
+            }
+
+            if (newBox.x + newBox.width > box.x + box.width) {
+                newBox.x = box.x + box.width - newBox.width;
+            }
+
+            if (newBox.y + newBox.height > box.y + box.height) {
+                newBox.y = box.y + box.height - newBox.height;
+            }
+            
+            //newBox.width = Math.max(newBox.width, 10);
+            //newBox.height = Math.max(newBox.height, 10);
             return newBox;
         }
     });
