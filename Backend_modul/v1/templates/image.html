@@ -2,20 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./image.css"/>
+        <link rel="stylesheet" href="/static/style/image.css"/>
         <title id="title_site_name">BloodCells</title>
-
     </head>
     <body>
-        <script src="./konva.js"></script>
-        <script src="./main_image.js"></script>
-        
+        <script src="/static/js/konva.js"></script>
+        <script src="/static/js/main_image.js"></script>
+
+        <div id="app" data-path="{{ image_path }}"></div>
+        <script id="image_labels">
+            window.labels = {{ image_labels | tojson }};
+        </script>
+
         <div id="content">
 
             <div id="win_nav">
                 <!--- выдвигающиеся окно --->
                 <div id="win_title">
-                    <img src="./avatar.jpg" id="win_nav_avatar"/>
+                    <img src="/static/images/avatar.jpg" id="win_nav_avatar"/>
                     <span id="win_nav_name">Иванов Иван Иванович</span>
                     <svg id="win_nav_cross" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 65.68 65.68" style="enable-background:new 0 0 65.68 65.68;" xml:space="preserve">
@@ -170,19 +174,18 @@
                         <span id="nameSite">BloodCells</span>
                     </a>
                     <a id="nav_link">
-                        <img src="./avatar.jpg" id="avatar"/>
+                        <img src="/static/images/avatar.jpg" id="avatar"/>
                     </a>
                 </nav>
                 <div style="height: 1rem"></div>
             </div>
-            
-            <script src="./image.js"></script>
+
+            <script src="/static/js/image.js"></script>
+
             <div id="body">
                 <!--- основной контент --->
                 <div id="hbody">
-                    <div id="canvas_div">
-
-                    </div>
+                    <div id="canvas_div"></div>
                 </div>
                 <div id="canvas_buttons">
                     <div id="buttons_tools">

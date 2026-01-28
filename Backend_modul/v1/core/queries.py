@@ -24,6 +24,30 @@ def last_six_image(engine):
             items.append(item_js)
     return items
 
+def get_image_path_id(engine, name):
+    with Session(engine) as session:
+        query = select(Images.id_image, Images.file_path).where(Images.file_name == f'{name}').limit(1)
+        result = session.execute(query).first()
+        return {"id": result[0], "path": result[1]}
+    
+
+def get_image_labels(engine, id):
+    with Session(engine) as session:
+        query = select(Labels.cls, Labels.x, Labels.y, Labels.w, Labels.h, Labels.conf).where(Labels.id_image == id)
+        result = session.execute(query).all()
+        labels = []
+        for item in result:
+            label = {
+                'cls': item[0],
+                'x': item[1],
+                'y': item[2],
+                'w': item[3],
+                'h': item[4],
+                'conf': item[5]
+            }
+            labels.append(label)
+        return labels
+
 
 def get_last_image_indx(engine):
     with Session(engine) as session:

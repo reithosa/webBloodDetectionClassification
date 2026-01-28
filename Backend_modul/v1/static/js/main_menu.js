@@ -46,17 +46,17 @@ document.addEventListener('DOMContentLoaded', ()=> {
             body: data
         }) 
         .then(response => {
-            console.log("Status: ", response.status);
             return response.json()
         })
         .then(responseData => {
-            if (responseData.status == "ok"){
+            if (responseData.status === true){
+                const safeFileName = encodeURIComponent(responseData.file_name);
+                console.log(`Енкодинг какой-то ${safeFileName}`)
                 let file_name = responseData.file_name
-                alert(`Status: ${responseData.status}, file_name: ${file_name}`)
-                console.log("Response Data: ", responseData);
+                console.log(`Status: ${responseData.status}, file_name: ${file_name}`)
                 setTimeout(() => {
                     console.log("File name: ", file_name);
-                    //window.location.href = `/getfile/${file_name}`;
+                    window.location.href = `/image/${file_name}`;
                 }, 1000);
             };
         })

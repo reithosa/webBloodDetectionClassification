@@ -24,9 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const bloodLayer = new Konva.Layer();
     stage.add(bloodLayer);
+    
+    const app = document.getElementById('app'); 
+    const img_path = app.dataset.path;
+    // let labels = document.getElementById('{{ image_labels|tojson|safe }}').textContent;
+    let labels = JSON.parse(window.labels);
+    console.log(typeof labels);
+    
 
     //Изображение с кровью
-    Konva.Image.fromURL('./test.jpg', (konvaImage) => {
+    Konva.Image.fromURL(img_path, (konvaImage) => {
         let image = konvaImage.image();
         let x_position = Math.floor((canvas_div.offsetWidth - image.naturalWidth) / 2);
         let y_position = Math.floor((canvas_div.offsetHeight - image.naturalHeight) / 2);

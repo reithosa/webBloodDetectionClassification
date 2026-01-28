@@ -52,12 +52,12 @@ async def post_image(image: UploadFile): # async не буду делать, п�
         print("=" * 100)
         print("РЕЗУЛЬТАТ ПОЛОЖИТЕЛЬНЫЙ")
         print("=" * 100)
-        return {"status": "true",
+        return {"status": True,
                 "file_name": img_name}
     else:
         print("=" * 100)
         print("РЕЗУЛЬТАТ НЕГАТИВНЫЙ")
         print("=" * 100)
-        return {"status": "false",
+        return {"status": False,
                 "file_name": img_name}
 
