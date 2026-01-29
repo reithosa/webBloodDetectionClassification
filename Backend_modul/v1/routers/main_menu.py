@@ -28,6 +28,7 @@ def image_analysys(path, name, engine):
         print("=" * 100)
         return False
 
+
 @main_router.get('/')
 async def get_main_page(request: Request):
     engine = conn()

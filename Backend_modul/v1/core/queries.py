@@ -7,6 +7,8 @@ from data_generator import generate
 
 def last_six_image(engine):
     items = []
+    names = []
+    typeOfFile = []
     Sessions = sessionmaker(bind=engine)
     with Sessions() as session:
         session.query(Images).limit(10)
@@ -15,11 +17,13 @@ def last_six_image(engine):
         result = session.execute(query).scalars().all()
         session.commit()
         for item in result:
+            name = str(item.file_name).split('.')
             item_js = {
                 "file_path": item.file_path,
                 "file_name": item.file_name,
                 "owner_name": 'Ivanov Ivan Ivanovich',
-                "date_create": (item.data_create).strftime('%Y-%m-%d %H:%M:%S')
+                "date_create": (item.data_create).strftime('%Y-%m-%d %H:%M:%S'),
+                "div_name": name[0]
             } 
             items.append(item_js)
     return items

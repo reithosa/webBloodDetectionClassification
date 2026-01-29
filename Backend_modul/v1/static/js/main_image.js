@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const navigator = document.getElementById("nav_link");
     const navigator_window = document.getElementById("win_nav");
     const cross = document.getElementById("win_nav_cross");
-    const title_site_name = document.getElementById('title_site_name');
+    const nameSite = document.getElementById('nameSite');
     const overlay = document.createElement('div');
     overlay.className = "menu_overlay";
     document.body.appendChild(overlay);
 
-    title_site_name.addEventListener('click', () => {
-        //Переход на главную страницу
+    nameSite.addEventListener('click', () => {
+        window.location.href = `/`;
     });
 
     navigator.addEventListener('click', (e) => {

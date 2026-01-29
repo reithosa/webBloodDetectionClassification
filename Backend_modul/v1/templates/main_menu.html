@@ -228,7 +228,7 @@
 
                         <div class="grid_summary">
                             {% for image in images %}
-                            <div class="container_image">
+                            <div class="container_image" id="{{image.div_name}}">
                                 <img src="{{ image.file_path }}" class="container_image_img">
                                 <div class="container_image_info">
                                     <span class="container_image_info_span">{{ image.file_name }}</span>
@@ -236,6 +236,15 @@
                                     <span class="container_image_info_span">{{ image.date_create}}</span>
                                 </div>
                             </div>
+                            <script>
+                                "use strict";
+                                document.addEventListener('DOMContentLoaded', ()=> {
+                                    const div_{{image.div_name}} = document.getElementById("{{image.div_name}}");
+                                    div_{{image.div_name}}.addEventListener('click', ()=> {
+                                        window.location.href = `/image/{{image.file_name}}`;
+                                    });
+                                });
+                            </script>
                             {% endfor %}
 
                             <!--
