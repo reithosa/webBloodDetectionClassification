@@ -7,10 +7,23 @@ ML_modul/labeling/*
 ML_modul/MyDataset/*/*
 special_venv/
 test.py/
+Backend_modul/uploads/*
+Backend_modul/v1/__pycache__/*
+Backend_modul/v1/config/__pycache__/*
+Backend_modul/v1/core/__pycache__/*
+Backend_modul/v1/ml/__pycache__/*
+Backend_modul/v1/routers/__pycache__/*
+Backend_modul/__pycache__/*
+Backend_modul/app/*
+Backend_modul/db/*
 
 #файлы
 ML_modul/PBC_dataset_normal_DIB.zip
 ML_modul/result.txt
+ML_modul/labeling.rar
+Backend_modul/static/images/Buttons.ai
+Backend_modul/database_min.sql
+
 
 #игнор
 !ML_modul/labeling/export
@@ -20,15 +33,3 @@ ML_modul/result.txt
 !ML_modul/MyDataset/monocyte/_copied_files.txt
 !ML_modul/MyDataset/neutrophil/_copied_files.txt
 !ML_modul/MyDataset/platelet/_copied_files.txt
-!Backend_modul/uploads/*
-!Backend_modul/v1/__pycache__/*
-!Backend_modul/v1/config/__pycache__/*
-!Backend_modul/v1/core/__pycache__/*
-!Backend_modul/v1/ml/__pycache__/*
-!Backend_modul/v1/routers/__pycache__/*
-!ML_modul/labeling.rar
-!Backend_modul/app/*
-!Backend_modul/db/*
-!Backend_modul/static/images/Buttons.ai
-!Backend_modul/database_min.sql
-!Backend_modul/__pycache__/*
