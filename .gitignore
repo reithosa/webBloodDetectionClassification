@@ -7,7 +7,7 @@ ML_modul/labeling/*
 ML_modul/MyDataset/*/*
 special_venv/
 test.py/
-Backend_modul/uploads/*
+
 Backend_modul/v1/__pycache__/*
 Backend_modul/v1/config/__pycache__/*
 Backend_modul/v1/core/__pycache__/*
