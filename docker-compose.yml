@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  label-studio:
+    image: heartexlabs/label-studio
+    ports:
+      - "8080:8080"
+    volumes:
+      - D:/label-studio-data:/label-studio/data
+    environment:
+      - LABEL_STUDIO_USERNAME=roujoded@yandex.ru
+      - LABEL_STUDIO_PASSWORD=Jaronimo135246%
