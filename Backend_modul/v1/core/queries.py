@@ -1,9 +1,8 @@
 from sqlalchemy import desc, select
-from model_type1 import create_db, drop_db, Images, Labels, Statistics_image
 from sqlalchemy.orm import sessionmaker, Session
 from datetime import datetime
-from data_generator import generate
-
+from v1.core.data_generator import generate
+from v1.core.model_type1 import create_db, drop_db, Images, Labels, Statistics_image
 
 def last_six_image(engine):
     items = []

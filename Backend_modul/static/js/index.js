@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById("input");
-    const trigger = document.getElementById("trigger");
+    const trigger = document.getElementById("blood_buttom");
     
     trigger.addEventListener('click', () => {
         input.click();

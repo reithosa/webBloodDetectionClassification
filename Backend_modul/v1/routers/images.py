@@ -1,10 +1,9 @@
 from fastapi import Request, APIRouter
 from fastapi.templating import Jinja2Templates
+from json import dumps
 from v1.config.paths import APP_PATH, TEMPLATES_PATH, IMAGES_PATH, STYLE_PATH, JS_PATH
 from v1.core.conn import conn
 from v1.core.queries import get_image_path_id, get_image_labels
-from json import dumps
-
 
 images_router = APIRouter(prefix='/image', tags=['Frontend'])
 templates = Jinja2Templates(directory=TEMPLATES_PATH)

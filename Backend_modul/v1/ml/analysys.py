@@ -1,7 +1,5 @@
 from ultralytics import YOLO
 from v1.config.paths import MODELS_ML_PATH
-from v1.core.model_type1 import Images, Statistics_image, Labels
-import cv2
 
 model = YOLO(MODELS_ML_PATH + "\\rbc_model.pt")
 

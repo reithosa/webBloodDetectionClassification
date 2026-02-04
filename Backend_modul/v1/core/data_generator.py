@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 from pathlib import Path
-from model_type1 import Images, Statistics_image, Labels
+from v1.core.model_type1 import Images, Statistics_image, Labels
 
 
 def generate():
