@@ -21,13 +21,13 @@ class Images(Base):
     data_create: Mapped[DateTime] = mapped_column(DateTime, default=func.now())
     status: Mapped[String] = mapped_column(String, default="pending")
 
-    relation_statistics: Mapped[list["Statistics_image"]] = relationship("Statistics_image", back_populates="relation_images")
-    relation_labels: Mapped[list["Labels"]] = relationship("Labels", back_populates="relation_images")
+    relation_statistics: Mapped[list["Statistics_image"]] = relationship("Statistics_image", back_populates="relation_images", cascade="all, delete-orphan", passive_deletes=True)
+    relation_labels: Mapped[list["Labels"]] = relationship("Labels", back_populates="relation_images", cascade="all, delete-orphan", passive_deletes=True)
 
 class Statistics_image(Base):
     __tablename__="stats"
     id_statistic: Mapped[Integer] = mapped_column(Integer, primary_key=True)
-    id_image: Mapped[Integer] = mapped_column(Integer, ForeignKey("images.id_image")) # эта строка при создании БД, но в orm, по сути, не используется
+    id_image: Mapped[Integer] = mapped_column(Integer, ForeignKey("images.id_image", ondelete="CASCADE")) # эта строка при создании БД, но в orm, по сути, не используется
     descriptions: Mapped[String] = mapped_column(String)
     date_create: Mapped[DateTime] = mapped_column(DateTime, default=func.now())
     
@@ -39,14 +39,13 @@ class Labels(Base):
         CheckConstraint("cls IN ('Platelet', 'RBC', 'WBC')"), #НАДО СВОЮ МОДЕЛЬ ПИСАТЬ
     )
     id_label: Mapped[Integer] = mapped_column(Integer, primary_key=True)
-    id_image: Mapped[Integer] = mapped_column(Integer, ForeignKey("images.id_image"))
+    id_image: Mapped[Integer] = mapped_column(Integer, ForeignKey("images.id_image", ondelete="CASCADE"))
     cls: Mapped[String] = mapped_column(String)
     x: Mapped[Float] = mapped_column(Float)
     y: Mapped[Float] = mapped_column(Float)
     w: Mapped[Float] = mapped_column(Float)
     h: Mapped[Float] = mapped_column(Float)
     conf: Mapped[Float] = mapped_column(Float)
-    #ДОДЕЛАТЬ 
     relation_images: Mapped["Images"] = relationship("Images", back_populates="relation_labels")
 
 

@@ -28,4 +28,40 @@ document.addEventListener('DOMContentLoaded', ()=> {
         overlay.classList.remove('active');
     });
 
+    const delete_btn = document.getElementById('delete_button');
+    delete_btn.addEventListener("click", ()=> {
+        if(confirm("Вы уверены, что хотите удалить объект?")){
+            fetch(`${window.location.pathname}/delete`, {
+                method: "post",
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(responseData => {
+                if(responseData.status == true) {
+                    let str_result = (responseData.del_file ? `Файл ${responseData.image} удалён.` : `Файл ${responseData.image} НЕ удалён.`) + " " + (responseData.del_row ? `Данные ${responseData.image} удалены.` : `Данные ${responseData.image} НЕ удалены.`);
+                    console.log(str_result)
+                    alert(str_result);
+                    setTimeout(() => {
+                        window.location.href = `/`;
+                    }, 1000);
+                } else {
+                    let str_result = (responseData.del_file ? `Файл ${responseData.image} удалён.` : `Файл ${responseData.image} НЕ удалён.`) + " " + (responseData.del_row ? `Данные ${responseData.image} удалены.` : `Данные ${responseData.image} НЕ удалены.`);
+                    console.log(str_result)
+                    alert(str_result);
+                };
+            })
+        }
+    });
+
+    const change_btn = document.getElementById("change_button");
+    change_btn.addEventListener("click", ()=>{
+
+    });
+
+    const stat_btn = document.getElementById("stat_button");
+    stat_btn.addEventListener("click", ()=>{
+
+    });
+
 });

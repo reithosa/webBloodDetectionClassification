@@ -1,6 +1,9 @@
-from sqlalchemy import desc, select
+from sqlalchemy import desc, select, delete
 from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.exc import SQLAlchemyError
 from datetime import datetime
+import os
+from v1.config.paths import APP_PATH, UPLOADS_PATH
 from v1.core.data_generator import generate
 from v1.core.model_type1 import create_db, drop_db, Images, Labels, Statistics_image
 
@@ -106,6 +109,62 @@ def upload_image(name, engine):
         print("=" * 100)
         print("Загрузка в images")
         print("=" * 100)
+
+def delete_image(name, engine):
+    image_indx = get_image_indx(name, engine)
+    image_path = get_image_path_id(engine, name)["path"]
+    path = os.path.join(os.path.dirname(APP_PATH), image_path.lstrip('\\/'))
+    try:
+        with Session(engine) as session:
+            image = session.get(Images, image_indx)
+            session.delete(image)
+            try:
+                if os.path.exists(path):
+                    os.remove(path)
+                    session.commit()
+                    print("=" * 100)
+                    print(f"Файл успешно удалён {name} -- {path}")
+                    print("=" * 100)
+                    return {
+                        "del_file": True,
+                        "del_row": True,
+                        "status": True,
+                        "image": name
+                    }
+                else:
+                    session.commit()
+                    print("=" * 100)
+                    print(f"Файл не найден {name} -- {path}")
+                    print("=" * 100)
+                    return {
+                        "del_file": False,
+                        "del_row": True,
+                        "status": True,
+                        "image": name
+                    }
+                
+            except OSError as e:
+                session.rollback()
+                print("=" * 100)
+                print(f"Ошибка: {e}")
+                print("=" * 100)
+                return {
+                    "del_file": False,
+                    "del_row": False,
+                    "status": False,
+                    "image": name
+                }
+            
+    except SQLAlchemyError as e:
+        print("=" * 100)
+        print(f"Ошибка: {e}")
+        print("=" * 100)
+        return {
+            "del_file": False,
+            "del_row": False,
+            "status": False,
+            "image": name
+        }
 
 
 def _restart_db(engine):
