@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const app = document.getElementById('app'); 
     const img_path = app.dataset.path;
+    console.log(`${img_path.slice(img_path.indexOf('image'))}`);
     let labels = JSON.parse(window.labels);
     
 
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let color = '';
             if (item.cls == 'WBC') {
                 color = 'purple';
-            } else if (item.cls == 'PLT') {
+            } else if (item.cls == 'Platelet') {
                 color = 'DarkSlateGray';
             } else {
                 color = 'red';

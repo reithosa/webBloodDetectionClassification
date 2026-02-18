@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
     const change_btn = document.getElementById("change_button");
     change_btn.addEventListener("click", ()=>{
-
+        window.location.href = `${window.location.pathname}/editor`;
     });
 
     const stat_btn = document.getElementById("stat_button");
     stat_btn.addEventListener("click", ()=>{
-
+        
     });
 
 });

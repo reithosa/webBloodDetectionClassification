@@ -10,22 +10,14 @@ templates = Jinja2Templates(directory=TEMPLATES_PATH)
 
 def image_analysys(path, name, engine):
     try:
-        print("=" * 100)
         print("image_analysys START")
-        print("=" * 100)
         result = search_cells(path)
-        print("=" * 100)
         print("image_analysys upload_labels")
-        print("=" * 100)
         upload_labels(name, result, engine)
-        print("=" * 100)
         print("image_analysys TRUE")
-        print("=" * 100)
         return True
     except BaseException:
-        print("=" * 100)
         print("image_analysys FALSE")
-        print("=" * 100)
         return False
 
 
@@ -50,15 +42,11 @@ async def post_image(image: UploadFile): # async не буду делать, п�
         f.write(img.read())
     
     if image_analysys(img_path, img_name, engine):
-        print("=" * 100)
         print("РЕЗУЛЬТАТ ПОЛОЖИТЕЛЬНЫЙ")
-        print("=" * 100)
         return {"status": True,
                 "file_name": img_name}
     else:
-        print("=" * 100)
         print("РЕЗУЛЬТАТ НЕГАТИВНЫЙ")
-        print("=" * 100)
         return {"status": False,
                 "file_name": img_name}
 

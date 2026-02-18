@@ -10,10 +10,9 @@ def search_cells(path):
         conf=0.3,
         iou=0.3
     )
-    print("=" * 100)
-    print("Обработка МЛ")
-    print(results[0].boxes.xywh)
-    print("=" * 100)
+    print("Обработка YOLO \n func: search_cells \n modul: analysys.py \n")
+    print(results[0])
+
     return results[0]
 
     
