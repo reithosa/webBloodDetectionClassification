@@ -109,7 +109,7 @@ folder/
 <details>
 <summary>Результаты обучения модели</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/results.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/results.png" alt="main">
 </div>
 </details>
 
@@ -123,26 +123,26 @@ folder/
 <details>
 <summary>Окно загрузки изображения</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/upload1.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/upload1.png" alt="main">
 </div>
 </details>
 <details>
 <summary>Предпросмотр загружаемого изображения (окно загрузки)</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/upload2.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/upload2.png" alt="main">
 </div>
 </details>
 <details>
 <summary>Окно-редактор</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/editor.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/editor.png" alt="main">
     <small><em>P.S. Редактор был вдохновлён labelstudio, но сделан самостоятельно</em></small>
 </div>
 </details>
 <details>
 <summary>Окно со всеми изображениями</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/images.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/images.png" alt="main">
 </div>
 </details>
 
@@ -153,7 +153,7 @@ folder/
 За основу взята клиент-серверная архитектура, пример которой представлен на изображении.
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/Server_Client_HTTP.jpg" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/Server_Client_HTTP.jpg" alt="main">
     <br>
     <small><em>Схема клиент-серверной архитектуры</em></small>
 </div>
@@ -162,7 +162,7 @@ folder/
 Приложению необходимо хранить данные об изображениях, метках и отчётах. В СУБД созданы соответствующие сущности и их атрибуты, а также присвоены типы данных.
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/db_schema.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/db_schema.png" alt="main">
     <br>
     <small><em>Даталогическая модель БД</em></small>
 </div>
@@ -225,7 +225,7 @@ folder/
 <details>
 <summary>Сценарии использования приложения</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/main/screenshots/final_schema_app_v.png" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/final_schema_app_v.png" alt="main">
     <br>
     <small><em>Блок-схема алгоритма работы приложения</em></small>
 </div>
