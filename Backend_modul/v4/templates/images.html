@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cells — Анализ мазка крови</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/style_images.css">
+    <link rel="shortcut icon" href="/static/images/favicon3.ico"/>
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="nav-logo" id="logo-Button">
+        <div class="nav-logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="1" y="1" width="30" height="30" rx="2" stroke="#2a2f38" stroke-width="1"/>
+            <circle cx="16" cy="16" r="8" stroke="#c8f060" stroke-width="1" opacity="0.4"/>
+            <circle cx="16" cy="16" r="4" fill="none" stroke="#c8f060" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="1.5" fill="#c8f060"/>
+            <line x1="16" y1="4"  x2="16" y2="8"  stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="16" y1="24" x2="16" y2="28" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="4"  y1="16" x2="8"  y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="24" y1="16" x2="28" y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="nav-logo-text">Blood Cells</div>
+          <div class="nav-logo-sub">Анализ мазка крови</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#" class="nav-link" id="main-menu-Template"><span>Загрузка</span></a>
+        <a href="#" class="nav-link active" id="images-Template"><span>Изображения</span></a>
+      </div>
+    </nav>
+
+    <main>
+      <aside class="sidebar">
+        <div class="fade-in">
+          <div class="sidebar-section-title">Метаданные изображения</div>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-key">Имя файла</span><span class="spec-val highlight" id="file-name">—</span></div>
+            <div class="spec-item"><span class="spec-key">Дата создания</span><span class="spec-val highlight" id="file-date-create">—</span></div>
+            <div class="spec-item"><span class="spec-key">Владелец</span><span class="spec-val highlight" id="file-owner">—</span></div>
+            <div class="spec-item"><span class="spec-key">Разрешение</span><span class="spec-val highlight" id="file-resolution">—</span></div>
+            <div class="spec-item"><span class="spec-key">Размер</span><span class="spec-val highlight" id="file-size">—</span></div>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="sidebar-section-title">Обнаруженные объекты</div>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-key">Эритроциты</span><span class="spec-val highlight" id="rbc">—</span></div>
+            <div class="spec-item"><span class="spec-key">Тромбоциты</span><span class="spec-val highlight" id="plt">—</span></div>
+            <div class="spec-item lue_title"><span class="spec-key">Лейкоциты:</span></div>
+            <div class="spec-item lue"><span class="spec-key">- Эозинофилы</span><span class="spec-val highlight" id="eos">—</span></div>
+            <div class="spec-item lue"><span class="spec-key">- Базофилы</span><span class="spec-val highlight" id="bas">—</span></div>
+            <div class="spec-item lue"><span class="spec-key">- Нейтрофилы</span><span class="spec-val highlight" id="neu">—</span></div>
+            <div class="spec-item lue"><span class="spec-key">- Моноциты</span><span class="spec-val highlight" id="mon">—</span></div>
+            <div class="spec-item lue"><span class="spec-key">- Лимфоциты</span><span class="spec-val highlight" id="lym">—</span></div>
+          </div>
+        </div>
+
+        <div class="image-buttons">
+          <button class="image-btn image-btn--primary" id="editBtn" disabled>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M1.5 9V11.5H4L10.5 5 8 2.5 1.5 9z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M8 2.5l2.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            Открыть
+          </button>
+          <button class="image-btn image-btn--danger" id="deleteBtn" disabled stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" >
+              <path d="M1.5 3.5h10M5 3.5V2.5h3v1M4.5 3.5l.5 7h3l.5-7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Удалить
+          </button>
+        </div>
+      </aside>
+
+      <div class="content-area">
+        <!-- Grid -->
+        <div class="items-area fade-in" id="itemsArea">
+          
+        </div>
+
+        <!-- Pagination -->
+        <div class="pages-area fade-in">
+          <button class="page-nav" id="pagePrev" disabled aria-label="Назад">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M8.5 3L5 7l3.5 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="page-numbers" id="pageNumbers">
+            {% for page in pagination_range %}
+                {% if page is none %}
+                    <span class="page-ellipsis">···</span>
+                {% else %}
+                    <button class="page-num {% if page == current_page %}active{% endif %}" data-page="{{ page }}">
+                        {{ page }}
+                    </button>
+                {% endif %}
+            {% endfor %}
+          </div>
+
+          <button class="page-nav" id="pageNext" aria-label="Вперёд" data-max="{{ max_pages }}">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M5.5 3L9 7l-3.5 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+    <div class="notifications" id="notifications"></div>
+    <script src="/static/js/script_images.js"></script>
+  </body>
+</html>
