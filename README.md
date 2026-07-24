@@ -109,10 +109,9 @@ folder/
 <details>
 <summary>Распределение классов</summary>
 <div align="center">
-    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/counts_of_objects.jpg" alt="main">
+    <img src="https://raw.githubusercontent.com/reithosa/webBloodDetectionClassification/master/screenshots/counts_of_objects.jpg" alt="main" height='300'>
 </div>
 </details>
-
 <details>
 <summary>Результаты обучения модели</summary>
 <div align="center">
