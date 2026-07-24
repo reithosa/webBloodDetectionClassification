@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cells — Анализ мазка крови</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/style_main.css">
+    <link rel="shortcut icon" href="/static/images/favicon3.ico"/>
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="nav-logo" id="logo-Button">
+        <div class="nav-logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="1" y="1" width="30" height="30" rx="2" stroke="#2a2f38" stroke-width="1"/>
+            <circle cx="16" cy="16" r="8" stroke="#c8f060" stroke-width="1" opacity="0.4"/>
+            <circle cx="16" cy="16" r="4" fill="none" stroke="#c8f060" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="1.5" fill="#c8f060"/>
+            <line x1="16" y1="4"  x2="16" y2="8"  stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="16" y1="24" x2="16" y2="28" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="4"  y1="16" x2="8"  y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="24" y1="16" x2="28" y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="nav-logo-text">Blood Cells</div>
+          <div class="nav-logo-sub">Анализ мазка крови</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#" class="nav-link active" id="main-menu-Template">
+          <span>Загрузка</span>
+        </a>
+        <a href="#" class="nav-link" id="images-Template">
+          <span>Изображения</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <div class="fade-in">
+          <div class="sidebar-section-title">Параметры анализа</div>
+          <div class="spec-list">
+            <div class="spec-item">
+              <span class="spec-key">Метод</span>
+              <span class="spec-val highlight">Deep Learning</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Модель</span>
+              <span class="spec-val">YOLO</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Точность</span>
+              <span class="spec-val highlight">97.4%</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Классы</span>
+              <span class="spec-val">8 типов клеток</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Мин. разрешение</span>
+              <span class="spec-val">360×360 px</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Макс. размер</span>
+              <span class="spec-val">32 МБ</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Форматы</span>
+              <span class="spec-val">JPG, PNG, JPEG</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="fade-in">
+          <div class="sidebar-section-title">Обнаруживаемые элементы</div>
+          <div class="spec-list">
+            <div class="spec-item">
+              <span class="spec-key">Эритроциты</span>
+              <span class="spec-val highlight">✓</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Тромбоциты</span>
+              <span class="spec-val highlight">✓</span>
+            </div>
+            <div class="spec-item lue_title">
+              <span class="spec-key">Лейкоциты:</span>
+            </div>
+            <div class="spec-item lue">
+                <span class="spec-key">- Эозинофилы</span>
+                <span class="spec-val highlight">✓</span>
+              </div>
+              <div class="spec-item lue">
+                <span class="spec-key">- Базофилы</span>
+                <span class="spec-val highlight">✓</span>
+              </div>
+              <div class="spec-item lue">
+                <span class="spec-key">- Нейтрофилы</span>
+                <span class="spec-val highlight">✓</span>
+              </div>
+              <div class="spec-item lue">
+                <span class="spec-key">- Моноциты</span>
+                <span class="spec-val highlight">✓</span>
+              </div>
+              <div class="spec-item lue">
+                <span class="spec-key">- Лимфоциты</span>
+                <span class="spec-val highlight">✓</span>
+              </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Контенкт -->
+      <div class="content-area">
+
+        <!-- Зона загрузки -->
+        <div class="upload-zone fade-in" id="uploadZone">
+          <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+
+          <div class="upload-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M4 20v2a2 2 0 002 2h16a2 2 0 002-2v-2M14 4v14M8 10l6-6 6 6"
+                    stroke="#c8f060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="upload-title">Загрузить снимок мазка крови</div>
+          <div class="upload-subtitle">
+            Перетащите файл сюда или нажмите кнопку ниже.
+          </div>
+
+          <div class="upload-formats">
+            <span class="format-tag">JPG</span>
+            <span class="upload-or">·</span>
+            <span class="format-tag">JPEG</span>
+            <span class="upload-or">·</span>
+            <span class="format-tag">PNG</span>
+          </div>
+
+          <button class="upload-btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 10v1a1 1 0 001 1h8a1 1 0 001-1v-1M7 2v7M4 5l3-3 3 3"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Выбрать файл
+          </button>
+
+          <!-- Анимация загрузки -->
+          <div class="analyzing-overlay" id="analyzingOverlay">
+            <div class="scan-line"></div>
+            <div class="analyzing-text">Обработка изображения...</div>
+          </div>
+        </div>
+
+        <!-- Предпросмотр изображения -->
+        <div class="preview-area" id="previewArea">
+          <div class="preview-header">
+            <div class="preview-header-left">
+              <span class="preview-label">Предпросмотр</span>
+              <span class="preview-filename" id="previewFilename">—</span>
+            </div>
+            <button class="preview-clear" id="clearBtn">Удалить</button>
+          </div>
+          <div class="preview-content">
+            <div class="preview-img-wrap">
+              <img id="previewImg" src="" alt="Preview">
+            </div>
+            <div class="preview-meta">
+              <div class="preview-meta-title">Метаданные</div>
+              <div class="spec-list" id="fileMeta"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-row fade-in">
+          <span class="submit-note" id="submitNote">// Файл не выбран</span>
+
+          <button class="submit-btn" id="submitBtn" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M5 8l2.5 2.5L11 5.5" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Запустить анализ
+          </button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <div class="notifications" id="notifications"></div>
+
+    <script src="/static/js/script_main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cells — Анализ мазка крови</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/style_editor.css">
+    <link rel="shortcut icon" href="/static/images/favicon3.ico"/>
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="nav-logo" id="logo-Button">
+        <div class="nav-logo-mark">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="1" y="1" width="30" height="30" rx="2" stroke="#2a2f38" stroke-width="1"/>
+            <circle cx="16" cy="16" r="8" stroke="#c8f060" stroke-width="1" opacity="0.4"/>
+            <circle cx="16" cy="16" r="4" fill="none" stroke="#c8f060" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="1.5" fill="#c8f060"/>
+            <line x1="16" y1="4"  x2="16" y2="8"  stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="16" y1="24" x2="16" y2="28" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="4"  y1="16" x2="8"  y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+            <line x1="24" y1="16" x2="28" y2="16" stroke="#c8f060" stroke-width="1" opacity="0.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="nav-logo-text">Blood Cells</div>
+          <div class="nav-logo-sub">Анализ мазка крови</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#" class="nav-link" id="main-menu-Template"><span>Загрузка</span></a>
+        <a href="#" class="nav-link" id="images-Template"><span>Изображения</span></a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="fade-in">
+          <div class="sidebar-section-title">Параметры изображения</div>
+          <div class="spec-list">
+            <div class="spec-item"><span class="spec-key">Имя файла</span><span class="spec-val highlight" id="file-name">—</span></div>
+            <div class="spec-item"><span class="spec-key">Дата создания</span><span class="spec-val highlight" id="file-date-create">—</span></div>
+            <div class="spec-item"><span class="spec-key">Владелец</span><span class="spec-val highlight" id="file-owner">—</span></div>
+            <div class="spec-item"><span class="spec-key">Разрешение</span><span class="spec-val highlight" id="file-resolution">—</span></div>
+            <div class="spec-item"><span class="spec-key">Размер</span><span class="spec-val highlight" id="file-size">—</span></div>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="sidebar-section-title">Параметры выделяющей рамки</div>
+          <div class="spec-list">
+            <div class="spec-item">
+              <span class="spec-key">Класс:</span>
+              <span class="spec-val highlight" id="class-box">—</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">x:</span>
+              <span class="spec-val" id="x-box">—</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">y:</span>
+              <span class="spec-val" id="y-box">—</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Ширина:</span>
+              <span class="spec-val" id="width-box">—</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Высота:</span>
+              <span class="spec-val" id="height-box">—</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">Уверенность:</span>
+              <span class="spec-val" id="conf-box">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="class-selector-wrapper" class="fade-in">
+          <div class="sidebar-section-title">Изменить класс</div>
+          <select id="class-selector">
+              <option value="#e05252" class="cell-option">
+                <span class="cell-dot" style="--c:#e05252;"></span>
+                <span class="cell-name">Эритроциты</span>
+              </option>
+
+              <option value="#e8a94d" class="cell-option">
+                <span class="cell-dot" style="--c:#e8a94d;"></span>
+                <span class="cell-name">Тромбоциты</span>
+              </option>
+
+              <option value="#c8f060" class="cell-option">
+                <span class="cell-dot" style="--c:#c8f060;"></span>
+                <span class="cell-name">Эозинофилы</span>
+              </option>
+
+              <option value="#a78bfa" class="cell-option">
+                <span class="cell-dot" style="--c:#a78bfa;"></span>
+                <span class="cell-name">Базофилы</span>
+              </option>
+
+              <option value="#4da6ff" class="cell-option">
+                <span class="cell-dot" style="--c:#4da6ff;"></span>
+                <span class="cell-name">Нейтрофилы</span>
+              </option>
+
+              <option value="#f472b6" class="cell-option">
+                <span class="cell-dot" style="--c:#f472b6;"></span>
+                <span class="cell-name">Моноциты</span>
+              </option>
+
+              <option value="#34d399" class="cell-option">
+                <span class="cell-dot" style="--c:#34d399;"></span>
+                <span class="cell-name">Лимфоциты</span>
+              </option>
+          </select>
+        </div>
+
+        <div class="image-buttons">
+          <button class="image-btn image-btn--danger" id="deleteBtn" disabled stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" >
+              <path d="M1.5 3.5h10M5 3.5V2.5h3v1M4.5 3.5l.5 7h3l.5-7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Удалить
+          </button>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <div class="content-area">
+
+        <!-- Canvas zone -->
+        <div class="upload-zone fade-in" id="uploadZone">
+          <div class="analyzing-overlay" id="analyzingOverlay">
+            <div class="scan-line"></div>
+            <div class="analyzing-text">Обработка изображения...</div>
+          </div>
+        </div>
+
+        <div class="toolbar fade-in">
+
+          <!-- Кнопки клеток -->
+          <div class="toolbar-group">
+            <div class="toolbar-label">Слои</div>
+            <div class="cell-buttons">
+
+              <button class="cell-btn" id="rbc" data-cell="rbc" data-color="#e05252" title="Эритроциты">
+                <span class="cell-dot" style="--c:#e05252;"></span>
+                <span class="cell-name">Эритроциты</span>
+              </button>
+
+              <button class="cell-btn" id="plt" data-cell="plt" data-color="#e8a94d" title="Тромбоциты">
+                <span class="cell-dot" style="--c:#e8a94d;"></span>
+                <span class="cell-name">Тромбоциты</span>
+              </button>
+
+              <button class="cell-btn" id="eos" data-cell="eos" data-color="c8f060" title="Эозинофилы">
+                <span class="cell-dot" style="--c:#c8f060;"></span>
+                <span class="cell-name">Эозинофилы</span>
+              </button>
+
+              <button class="cell-btn" id="bas" data-cell="bas" data-color="#a78bfa" title="Базофилы">
+                <span class="cell-dot" style="--c:#a78bfa;"></span>
+                <span class="cell-name">Базофилы</span>
+              </button>
+
+              <button class="cell-btn" id="neu" data-cell="neu" data-color="#4da6ff" title="Нейтрофилы">
+                <span class="cell-dot" style="--c:#4da6ff;"></span>
+                <span class="cell-name">Нейтрофилы</span>
+              </button>
+
+              <button class="cell-btn" id="mon" data-cell="mon" data-color="#f472b6" title="Моноциты">
+                <span class="cell-dot" style="--c:#f472b6;"></span>
+                <span class="cell-name">Моноциты</span>
+              </button>
+
+              <button class="cell-btn" id="lym" data-cell="lym" data-color="#34d399" title="Лимфоциты">
+                <span class="cell-dot" style="--c:#34d399;"></span>
+                <span class="cell-name">Лимфоциты</span>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="toolbar-sep"></div>
+
+          <!-- Инструменты холста -->
+          <div class="toolbar-group">
+            <div class="toolbar-label">Инструменты</div>
+            <div class="canvas-tools">
+
+              <button class="tool-btn active" id="toolCursor" data-tool="cursor" title="Выделение (V)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 2l4.5 10 1.8-4.2L12.5 6 2 2z" stroke="currentColor" stroke-width="1.2"
+                        stroke-linejoin="round" fill="none"/>
+                </svg>
+                <span>Курсор</span>
+              </button>
+
+              <button class="tool-btn" id="toolHand" data-tool="hand" title="Рука (H)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M5 6V3a1 1 0 0 1 2 0v3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M7 5V2.5a1 1 0 0 1 2 0V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M9 5.5V4a1 1 0 0 1 2 0v3.5c0 2.5-1.5 4-3.5 4S3 11 3 9V7a1 1 0 0 1 2 0v1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span>Рука</span>
+              </button>
+
+              <div class="tool-divider"></div>
+
+              <button class="tool-btn" id="toolZoomIn" data-tool="zoomin" title="Приблизить (+)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M4.5 6h3M6 4.5v3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M9.5 9.5l2.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span>+</span>
+              </button>
+
+              <button class="tool-btn" id="toolZoomOut" data-tool="zoomout" title="Отдалить (-)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M4.5 6h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M9.5 9.5l2.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span>−</span>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="toolbar-sep"></div>
+
+          <!-- Статус и Сохранить -->
+          <div class="toolbar-group toolbar-group--right">
+            <span class="submit-note" id="submitNote">// Файл не выбран</span>
+            <button class="submit-btn" id="submitBtn">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/>
+                <path d="M4.5 7l2 2 3-3.5" stroke="currentColor" stroke-width="1.3"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Сохранить
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <div class="notifications" id="notifications"></div>
+
+    <div id="app" 
+    data-path="{{ image_info.get('path', '—') }}"
+    data-name="{{ image_info.get('name', '—') }}" 
+    data-owner="{{ image_info.get('owner', '—') }}"  
+    data-date="{{ image_info.get('date', '—') }}" 
+    data-res="{{ image_info.get('res', '—') }}"  
+    data-size="{{ image_info.get('size', '—') }}" ></div>
+    <script id="image_labels">
+        window.labels = {{ image_labels | tojson }};
+    </script>
+    <script src="/static/js/konva.js"></script>
+    <script src="/static/js/script_editor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{%for panel in panels%}
+  {% set image = panel[0] %}
+  {% set labels = panel[1] %}
+
+  <div class="item" 
+  data-name="{{panel[0].file_name}}" 
+  data-owner="User" 
+  data-date="{{panel[0].data_create}}" 
+  data-res="—" 
+  data-size="—"
+  data-rbc="{{ labels.get('erythrocyte', '—') }}"
+  data-plt="{{ labels.get('platelet', '—') }}"
+  data-eos="{{ labels.get('eosinophil', '—') }}" 
+  data-bas="{{ labels.get('basophil', '—') }}"
+  data-neu="{{ labels.get('neutrophil', '—') }}"
+  data-mon="{{ labels.get('monocyte', '—') }}"
+  data-lym="{{ labels.get('lymphocyte', '—') }}">
+    <div class="item-thumb" style="background-image: url({{panel[0].file_path}});"></div>
+    <div class="item-info">
+      <span class="item-name">{{panel[0].file_name}}</span>
+      <div class="item-meta">
+        <span class="item-owner">User</span>
+        <span class="item-date">{{panel[0].data_create}}</span>
+      </div>
+    </div>
+  </div>
+{% endfor %}
