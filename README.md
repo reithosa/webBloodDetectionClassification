@@ -1,7 +1,7 @@
 # Blood Cells
 ---
 
-cd .Целью данного проекта является разработка программного обеспечения для автоматизации анализа мазка крови. Последняя рабочая версия находится по [ссылке](https://github.com/reithosa/webBloodDetectionClassification/tree/master/Backend_modul/v4).
+Целью данного проекта является разработка программного обеспечения для автоматизации анализа мазка крови. Последняя рабочая версия находится по [ссылке](https://github.com/reithosa/webBloodDetectionClassification/tree/master/Backend_modul/v4).
 
 
 Для запуска приложения необходимо:
