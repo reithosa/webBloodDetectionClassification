@@ -7,7 +7,8 @@ ML_modul/labeling/*
 ML_modul/MyDataset/*/*
 special_venv/
 test.py/
-
+__pycache__/
+Backend_modul/uploads/*
 Backend_modul/v1/__pycache__/*
 Backend_modul/v1/config/__pycache__/*
 Backend_modul/v1/core/__pycache__/*
@@ -23,7 +24,8 @@ ML_modul/result.txt
 ML_modul/labeling.rar
 Backend_modul/static/images/Buttons.ai
 Backend_modul/database_min.sql
-
+Backend_modul/v4/core/model_type2.py
+Backend_modul/v4/core/data_generator.py
 
 #игнор
 !ML_modul/labeling/export

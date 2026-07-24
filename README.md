@@ -88,14 +88,15 @@ folder/
 ### Стек
 
 В качестве языка разработки выбран python 3.13.14. Для разработки серверной части используются следующие библиотеки этого языка:
-	- [FastAPI](https://fastapi.tiangolo.com/) выбран для реализации серверного интерфейса (API) благодаря высокой производительности, автоматической генерации документации и простой валидации данных через библиотеку Pydantic;
-	- [Jinja2](https://jinja.palletsprojects.com/en/stable/) необходим для формирования HTML-страниц, отдаваемых сервером;
-	- [SQLAlchemy](https://www.sqlalchemy.org/) является ORM (Object-Relational Mapping) для взаимодействия серверного интерфейса с PostgreSQL; 
-	- [Psycopg2](https://www.psycopg.org/docs/) используется SQLAlchemy как драйвер для подключения к базе данных;
-	- [Pydantic](https://pydantic.dev/) нужен для валидации данных и управления настройками; 
-	- [Pandas](https://pandas.pydata.org/) будет использоваться для обработки и агрегации результатов классификации;
-	- [Ultralytics](https://www.ultralytics.com/) это официальная библиотека для работы с моделями YOLO;
-	- [Uvicorn](https://uvicorn.dev/) необходим как ASGI-сервер для запуска FastAPI-приложения.
+	
+- [FastAPI](https://fastapi.tiangolo.com/) выбран для реализации серверного интерфейса (API) благодаря высокой производительности, автоматической генерации документации и простой валидации данных через библиотеку Pydantic;
+- [Jinja2](https://jinja.palletsprojects.com/en/stable/) необходим для формирования HTML-страниц, отдаваемых сервером;
+- [SQLAlchemy](https://www.sqlalchemy.org/) является ORM (Object-Relational Mapping) для взаимодействия серверного интерфейса с PostgreSQL;
+- [Psycopg2](https://www.psycopg.org/docs/) используется SQLAlchemy как драйвер для подключения к базе данных;
+- [Pydantic](https://pydantic.dev/) нужен для валидации данных и управления настройками;
+- [Pandas](https://pandas.pydata.org/) будет использоваться для обработки и агрегации результатов классификации;
+- [Ultralytics](https://www.ultralytics.com/) это официальная библиотека для работы с моделями YOLO;
+- [Uvicorn](https://uvicorn.dev/) необходим как ASGI-сервер для запуска FastAPI-приложения.
 
 В качестве системы управления реляционными базами данных  (СУБД) используется [PostgreSQL](https://www.postgresql.org/) 16.3. 
 
