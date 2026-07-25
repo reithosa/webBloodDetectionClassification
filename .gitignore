@@ -26,6 +26,8 @@ Backend_modul/static/images/Buttons.ai
 Backend_modul/database_min.sql
 Backend_modul/v4/core/model_type2.py
 Backend_modul/v4/core/data_generator.py
+docker-compose.yml
+blood-cells-atlas-ru.pdf
 
 #игнор
 !ML_modul/labeling/export
